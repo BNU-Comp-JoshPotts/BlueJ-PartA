@@ -14,6 +14,8 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
+    // gets cours
+    public Course course;
     
     /**
      * Create a new student with a given name and ID number.
@@ -23,6 +25,7 @@ public class Student
         name = fullName;
         id = studentID;
         credits = 0;
+        
     }
 
     /**
@@ -65,6 +68,15 @@ public class Student
     {
         return credits;
     }
+    
+    /**
+     * Add a student to this LabClass.
+     */
+    public void enrolOnCourse(Course course)
+    {
+        this.course = course;
+    }
+    
 
     /**
      * Return the login name of this student. The login name is a combination
@@ -73,7 +85,7 @@ public class Student
      */
     public String getLoginName()
     {
-        return name.substring(0,4) + id.substring(0,3);
+        return name.substring(0,4) + id.substring(03);
     }
     
     /**
@@ -81,6 +93,6 @@ public class Student
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + ", student ID: " + id + ", credits: " + credits + ", course: " + course );
     }
 }
