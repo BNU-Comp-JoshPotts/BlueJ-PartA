@@ -43,7 +43,7 @@ public class Ticket
     {
         // put your code here
         System.out.println("Ticket " + destination +
-            "Price " + price +
-            "Issued " + dateTime);
+            ", Price " + price +
+            ", Issued " + dateTime);
     }
 }

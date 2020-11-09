@@ -1,0 +1,34 @@
+TicketMachine ameMac1 = new TicketMachine(300);
+TicketMachine wycMac1 = new TicketMachine(330);
+TicketMachine aylMac1 = new TicketMachine(200);
+Coins coins2 = new Coins(10);
+Coins coins3 = new Coins(20);
+Coins coins4 = new Coins(100);
+Coins coins5 = new Coins(200);
+Ticket ame = new Ticket("Amersham", 220);
+Ticket ayl = new Ticket("Aylesbury", 220);
+Ticket ame = new Ticket("Amersham", 300);
+Ticket wyc = new Ticket("High Wycombe", 330);
+ameMac1.assignTicket(ame);
+ameMac1.insertCoin(coins4);
+ameMac1.insertCoin(coins5);
+ameMac1.printTicket();
+##################
+# The BlueJ Line
+Ticket Amersham, Price 300, Issued Mon Nov 09 01:19:52 GMT 2020
+# 300 cents.
+##################
+
+wycMac1.assignTicket(wyc);
+wycMac1.insertCoin(coins4);
+wycMac1.insertCoin(coins5);
+wycMac1.printTicket();
+You must insert at least: 30 more cents.
+aylMac1.assignTicket(ayl);
+aylMac1.insertCoin(coins4);
+aylMac1.insertCoin(coins5);
+aylMac1.insertCoin(coins2);
+aylMac1.insertCoin(coins2);
+aylMac1.refundBalance()
+Amount refunded: 320
+    returned int 320

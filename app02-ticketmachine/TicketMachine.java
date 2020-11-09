@@ -19,6 +19,8 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    //ticket printing
+    private Ticket ticket;
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -29,6 +31,18 @@ public class TicketMachine
         balance = 0;
         total = 0;
     }
+    
+     /**
+     * Add a course to this student.
+     */
+    public void assignTicket(Ticket ticket)
+    {
+        this.ticket = ticket;
+        
+        
+        
+    }
+    
 
     /**
      * @Return The price of a ticket.
@@ -63,6 +77,17 @@ public class TicketMachine
                                amount);
         }
     }
+    
+    
+    /**
+     * Uses set coins form the Coin class to put into the machine
+     */
+    public void insertCoin(Coins coins)
+    { 
+        balance = balance + coins.getCoins();
+        
+    }
+    
 
     /**
      * Print a ticket if enough money has been inserted, and
@@ -76,7 +101,7 @@ public class TicketMachine
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
+            ticket.print();
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();
@@ -102,7 +127,9 @@ public class TicketMachine
     {
         int amountToRefund;
         amountToRefund = balance;
+        System.out.println("Amount refunded: " + amountToRefund);
         balance = 0;
         return amountToRefund;
+        
     }
 }
