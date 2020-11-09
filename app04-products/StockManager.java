@@ -10,7 +10,11 @@ import java.util.ArrayList;
 public class StockManager
 {
     // A list of the products.
-    private ArrayList<Product> stock;
+    public ArrayList<Product> stock;
+    
+    public Product product;
+    
+    
 
     /**
      * Initialise the stock manager.
@@ -45,9 +49,15 @@ public class StockManager
      *         with a matching ID.
      */
     public Product findProduct(int id)
+    
     {
         return null;
+        
+        
+        
+        
     }
+    
     
     /**
      * Locate a product with the given ID, and return how
