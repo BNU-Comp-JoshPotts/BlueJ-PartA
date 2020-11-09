@@ -8,24 +8,29 @@
 public class Course
 {
     // the course name
-    public String course;
+    private String course;
     // the course code
-    public String code;
+    private String code;
 
     /**
      * Constructor for objects of class Course
      */
-    public Course(String courseName)
+    public Course(String course, String code)
     {
         // initialise instance variables
         this.course = course;
+        this.code = code;
+       
+        
        
     }
    
     
-    public String getCourse()
+    public void print()
     {
-        return course;
+        System.out.println("Course: " + course + ", Code: " + code);
+        
+        
         
 
     }

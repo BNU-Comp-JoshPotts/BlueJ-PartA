@@ -14,8 +14,11 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
-    // gets cours
-    public Course course;
+    // gets course
+ public Course course;
+ public Course code;
+    
+    //private ArrayList<Course> course;
     
     /**
      * Create a new student with a given name and ID number.
@@ -25,6 +28,7 @@ public class Student
         name = fullName;
         id = studentID;
         credits = 0;
+        
         
     }
 
@@ -70,11 +74,14 @@ public class Student
     }
     
     /**
-     * Add a student to this LabClass.
+     * Add a course to this student.
      */
     public void enrolOnCourse(Course course)
     {
         this.course = course;
+        
+        
+        
     }
     
 
@@ -93,6 +100,10 @@ public class Student
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits + ", course: " + course );
+        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        course.print();
+        
+        
+        
     }
 }
