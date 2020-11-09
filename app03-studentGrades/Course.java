@@ -47,6 +47,18 @@ public class Course
         {
             module1.setMark(mark);
         }
+        if(moduleNum == 2)
+        {
+            module2.setMark(mark);
+        }
+        if(moduleNum == 3)
+        {
+            module3.setMark(mark);
+        }
+        if(moduleNum == 4)
+        {
+            module4.setMark(mark);
+        }
     }
     
     public void print()
