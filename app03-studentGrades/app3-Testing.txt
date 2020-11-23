@@ -1,0 +1,33 @@
+Student student1 = new Student("Josh Potts", "12345");
+Course course1 = new Course("Games Dev", "98765");
+Module module1 = new Module("Comp Architectures", "CO450");
+Module module2 = new Module("Programming Concepts", "CO452");
+Module module3 = new Module("Game Design", "CO459");
+Module module4 = new Module("3D Modelling", "CO461");
+module1.setGrade(45);
+module1.print();
+Module: Comp Architectures, Code: CO450, Score: 45, Grade: D
+module2.setGrade(65);
+module3.setGrade(77);
+module4.setGrade(90);
+course1.addModule1(module1);
+course1.addModule2(module2);
+course1.addModule3(module3);
+course1.addModule4(module4);
+course1.print();
+Course: Games Dev, Code: 98765, Average Grade: null
+Module: Comp Architectures, Code: CO450, Score: 45, Grade: D
+Module: Programming Concepts, Code: CO452, Score: 65, Grade: B
+Module: Game Design, Code: CO459, Score: 77, Grade: A
+Module: 3D Modelling, Code: CO461, Score: 90, Grade: A
+course1.calculateFinal(45, 65, 77, 90);
+course1.getAverage()
+    returned int 69
+course1.setFinal(69);
+course1.print();
+Course: Games Dev, Code: 98765, Average Grade: B
+Module: Comp Architectures, Code: CO450, Score: 45, Grade: D
+Module: Programming Concepts, Code: CO452, Score: 65, Grade: B
+Module: Game Design, Code: CO459, Score: 77, Grade: A
+Module: 3D Modelling, Code: CO461, Score: 90, Grade: A
+
